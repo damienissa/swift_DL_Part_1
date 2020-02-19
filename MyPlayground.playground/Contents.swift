@@ -36,4 +36,15 @@ let converted = convert(number: 1234)
 
 print(converted)
 
+// Функция подсчета 1 в строке и возвращает их количество
+
+func natural(one: String) -> Int {
+    let result = one.filter { $0 == "1" }
+
+    return result.count
+}
+
+let resultat = natural(one: converted)
+
+print(resultat)
 
