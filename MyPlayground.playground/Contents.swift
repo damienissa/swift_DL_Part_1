@@ -132,6 +132,9 @@ player.startPlay()
 print(player.state)
 */
 
+
+// MARK: - Lesson 2
+/*
 enum FuelType {
     
     case bensine
@@ -176,3 +179,53 @@ class GruzoveAvto: Auto {
 let kamaz = GruzoveAvto(color: .red , fuelType: [.bensine], numberOfDors: 2, gruzopodyomnost: 40, typeGruzovogo: .samosval)
 let toplivo: [FuelType] = [.bensine, .lpg]
 let romanovaSemerka = Auto(color: .white, fuelType: toplivo, numberOfDors: 4)
+*/
+
+
+// MARK: - Lesson 3
+/*
+ 
+func blablabla(name: String) -> String {
+
+    return "Blablabla \(name)"
+}
+
+var bla = blablabla
+
+func tramp(bla2: @escaping (String) -> String) {
+
+    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+         print(bla2("Dima"))
+    }
+}
+
+tramp(bla2: bla)
+tramp { name in
+    return "trulala \(name)"
+}
+print(1)
+
+var mass = [5, 2, 5, 6, 8, 9]
+var sortedMass = mass.sorted { (first, second) -> Bool in
+    return first > second
+}
+print(sortedMass)
+*/
+
+
+/*
+func getGoogle(conv: @escaping (Data) -> String) {
+    
+    let url = URL(string: "https://google.com")!
+    URLSession.shared.dataTask(with: url) { (data, _, _) in
+      print(conv(data!))
+    }.resume()
+}
+
+func converter(data: Data) -> String {
+    let str = String(decoding: data, as: UTF8.self)
+    return str
+}
+
+getGoogle(conv: converter)
+*/
